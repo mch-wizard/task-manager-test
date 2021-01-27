@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans&display=swap" rel="stylesheet"> 
+    <title>MCH TASKS WEB APP</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/d1754a7524.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <nav class="dashboard">
+        <a href="#" class="dashboard__logo"><span class="dashboard__logo--modlogo">MCH</span> Management Systems</a>
+        <div class="dashboard-box">
+            <ul class="dashboard-box-items">
+                <li class="dashboard-box-items__item item-margin"><a href="" class="dashboard-box-items__link link-extract">Tasks</a></li>
+                <li class="dashboard-box-items__item item-margin"><a href="" class="dashboard-box-items__link">Groups</a></li>
+                <li class="dashboard-box-items__item item-margin"><a href="" class="dashboard-box-items__link">Projects</a></li>
+                <li class="dashboard-box-items__item"><a href="" class="dashboard-box-items__link">My account</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="tasksapp-container">
+        <section class="tasksapp">
+            <header class="tasksapp-header">
+                <h1 class="tasksapp-header__title">Tasks Web App</h1>
+                <input type="text" class="tasksapp-header__input" placeholder="Enter the task text...">
+                <button class="tasksapp-header__addbutton">Add</button>
+            </header>
+            <div class="tasksapp-list">
+                <h3 class="tasksapp-list__title">Tasks List:</h3>
+                <p class="tasksapp-list__alert-info">There are no tasks in the list.</p>
+                <ul class="tasks-list-box">
+                    <!-- <li class="tasks-list-box__item">Learning english
+                        <div class="tasks-tools">
+                            <button class="tasks-tools__complete tasks-tools__button"><i class="far fa-check-square"></i></button><button class="tasks-tools__edit tasks-tools__button">EDIT</button><button class="tasks-tools__delete tasks-tools__button"><i class="far fa-trash-alt"></i></button>
+                        </div>
+                    </li>
+                    <li class="tasks-list-box__item">Learning programming
+                        <div class="tasks-tools">
+                            <button class="tasks-tools__complete tasks-tools__button"><i class="far fa-check-square"></i></button><button class="tasks-tools__edit tasks-tools__button">EDIT</button><button class="tasks-tools__delete tasks-tools__button"><i class="far fa-trash-alt"></i></button>
+                        </div>
+                    </li>
+                    <li class="tasks-list-box__item">MCH Business Development
+                        <div class="tasks-tools">
+                            <button class="tasks-tools__complete tasks-tools__button"><i class="far fa-check-square"></i></button><button class="tasks-tools__edit tasks-tools__button">EDIT</button><button class="tasks-tools__delete tasks-tools__button"><i class="far fa-trash-alt"></i></button>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+        </section>
+        <div class="task-popup">
+            <h3 class="task-popup__title">Edit task:</h3>
+            <div class="task-popup-tools">
+                <p class="task-popup-tools__info"></p>
+                <input type="text" class="task-popup-tools__input" placeholder="Enter new task content ...">
+                <button class="task-popup-tools__button accept">Submit</button>
+                <button class="task-popup-tools__button cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <a href="#" class="footer__logo">&copy;2020 <span class="footer__logo--modlogo">MCH</span> Management Systems</a>
+    </footer>
+    
+    <script src="js/main.js"></script>
+    
+</body>
+</html>

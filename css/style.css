@@ -1,0 +1,326 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  background-color: #1a1a1a;
+  font-size: 16px;
+}
+
+.dashboard {
+  top: 0;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 20px 20px;
+  border-bottom: 1px solid orange;
+  background-color: black;
+}
+
+.dashboard__logo {
+  margin-left: 50px;
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 10px 10px;
+  border: 1px solid darkorange;
+  -webkit-transition: -webkit-box-shadow .2s;
+  transition: -webkit-box-shadow .2s;
+  transition: box-shadow .2s;
+  transition: box-shadow .2s, -webkit-box-shadow .2s;
+}
+
+.dashboard__logo--modlogo {
+  color: orange;
+}
+
+.dashboard__logo:hover {
+  -webkit-box-shadow: 0 0 10px darkorange;
+          box-shadow: 0 0 10px darkorange;
+}
+
+.dashboard .dashboard-box {
+  margin-right: 50px;
+}
+
+.dashboard .dashboard-box .dashboard-box-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.dashboard .dashboard-box .dashboard-box-items__item {
+  padding: 5px 5px;
+  font-size: 24px;
+}
+
+.dashboard .dashboard-box .dashboard-box-items__item:hover {
+  border-bottom: 2px solid darkorange;
+}
+
+.dashboard .dashboard-box .dashboard-box-items .item-margin {
+  margin-right: 30px;
+}
+
+.dashboard .dashboard-box .dashboard-box-items__link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.dashboard .dashboard-box .dashboard-box-items .link-extract {
+  color: orange;
+}
+
+.tasksapp-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 150px 0;
+}
+
+.tasksapp-container .tasksapp {
+  width: 900px;
+  background-color: white;
+  border: 1px solid #793009;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px #793009;
+          box-shadow: 0 0 10px #793009;
+  text-align: center;
+  color: black;
+}
+
+.tasksapp-container .tasksapp-header {
+  border-radius: 10px 10px 0 0;
+  padding: 50px;
+  background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(0%, #793009), to(#ffa200));
+  background: linear-gradient(90deg, #020024 0%, #793009 0%, #ffa200 100%);
+}
+
+.tasksapp-container .tasksapp-header__title {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.tasksapp-container .tasksapp-header__input {
+  width: 80%;
+  padding: 10px 20px;
+  margin-right: 30px;
+  border: none;
+  border-radius: 10px;
+  color: #4f525c;
+}
+
+.tasksapp-container .tasksapp-header__addbutton {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 10px;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: color .3s, background-color .3s;
+  transition: color .3s, background-color .3s;
+}
+
+.tasksapp-container .tasksapp-header__addbutton:hover {
+  color: white;
+  background-color: #363636;
+}
+
+.tasksapp-container .tasksapp-list {
+  padding: 30px 0;
+}
+
+.tasksapp-container .tasksapp-list__title {
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.tasksapp-container .tasksapp-list__alert-info {
+  margin-top: 20px;
+  color: #793009;
+}
+
+.tasksapp-container .tasks-list-box__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15px;
+  padding-left: 20px;
+  text-align: left;
+  list-style: none;
+  background-color: whitesmoke;
+}
+
+.tasksapp-container .tasks-tools {
+  display: inline-block;
+}
+
+.tasksapp-container .tasks-tools__button {
+  padding: 15px 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+}
+
+.tasksapp-container .tasks-tools__button:hover {
+  background-color: #ddd;
+}
+
+.tasksapp-container .tasks-tools__complete {
+  color: #0084ff;
+}
+
+.tasksapp-container .tasks-tools__edit {
+  font-weight: bold;
+  color: purple;
+}
+
+.tasksapp-container .tasks-tools__delete {
+  color: tomato;
+}
+
+.tasksapp-container .tasks-tools .task-tools-completed {
+  font-size: 12px;
+  color: gray;
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+.tasksapp-container .task-popup {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 880px;
+  color: white;
+  background-color: #4f525c;
+  border-radius: 10px;
+}
+
+.tasksapp-container .task-popup__title {
+  padding: 20px;
+}
+
+.tasksapp-container .task-popup-tools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90%;
+  padding: 15px;
+}
+
+.tasksapp-container .task-popup-tools__info {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.tasksapp-container .task-popup-tools__input {
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  color: #4f525c;
+}
+
+.tasksapp-container .task-popup-tools__button {
+  width: 30%;
+  display: inline-block;
+  padding: 10px 22px;
+  margin: 20px;
+  border: none;
+  border-radius: 5px;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: color .3s, background-color .3s;
+  transition: color .3s, background-color .3s;
+}
+
+.tasksapp-container .task-popup-tools__button:hover {
+  color: white;
+  background-color: #ffa200;
+}
+
+.task-tools-completed {
+  font-size: 12px;
+  color: gray;
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid orange;
+  background-color: black;
+}
+
+.footer__logo {
+  padding: 20px 0;
+  text-decoration: none;
+  color: white;
+}
+
+.footer__logo--modlogo {
+  color: orange;
+}
+/*# sourceMappingURL=style.css.map */
