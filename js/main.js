@@ -19,9 +19,6 @@ let $closeTaskPopupButton;  // button to close the 'popup'
 let $idNumber = 0;  // It is used to mark the id number.
 let $allTasks;
 
-// TEST RegExp:
-let $regExp = /\s/;
-
 
 // OPTIMIZATION. Main function that runs the declared functions after the page has loaded.
 const main = () => {
@@ -40,7 +37,7 @@ const prepareDOMElements = () => {
     $taskPopupInput = document.querySelector('.task-popup-tools__input');
     $addTaskPopupButton = document.querySelector('.accept');
     $closeTaskPopupButton = document.querySelector('.cancel');
-    $allTasks = $listBox.getElementsByTagName('li');   // pobieramy z listy wszystkie elementy LI (żywa kolekcja)
+    $allTasks = $listBox.getElementsByTagName('li');   // live collection 
 };
 
 // We declare listeners:
@@ -54,7 +51,7 @@ const prepareDOMEvents = () => {
 
 // We add a new item to the list:
 const addNewTask = () => {
-    if ($taskInput.value !== '' && $taskInput.value !== '     ') {   // zablokować dodawanie samych spacji !
+    if ($taskInput.value !== '' && $taskInput.value !== '  ') {  // Fix mechanism for adding task as a regular space 
         $idNumber++;
         $newTask = document.createElement('li');
         $newTask.innerText = $taskInput.value;
@@ -62,17 +59,17 @@ const addNewTask = () => {
         $newTask.classList.add('tasks-list-box__item');
         $listBox.appendChild($newTask);
 
-        $taskInput.value = '';   // po dodaniu nowego zadania usuwa treść zadania z INPUTa
-        $alertInfo.innerText = '';   // po dodaniu zadania usuwa treść alertu z info 'Enter the task text!'
+        $taskInput.value = '';
+        $alertInfo.innerText = '';
 
-        createToolsArea();  // wywołujemy funkcję, która tworzy 'toolsPanel'
+        createToolsArea();
     } else {
         $alertInfo.innerText = 'Enter the task text!';
     };
 };
 
 const enterCheck = () => {
-    if (event.keyCode === 13) {   // POPRAWIĆ na - KeyboardEvent: key='Enter' | code='Enter'
+    if (event.keyCode === 13) {   // Correct adding the task after clicking enter - KeyboardEvent: key = 'Enter' | code = 'Enter' 
         addNewTask();
     };
 };
@@ -110,8 +107,6 @@ const checkClick = (e) => {
         e.target.closest('li').classList.toggle('task-tools-completed');
         e.target.closest('button').classList.toggle('task-tools-completed');
 
-        // Do dodania zablokowanie możliwości edycji po spełnieniu tego warunku !
-
     } else if (e.target.closest('button').classList.contains('tasks-tools__edit')) {
 
         editTask(e);
@@ -124,16 +119,16 @@ const checkClick = (e) => {
 
 // Editing a task (popup):
 const editTask = (e) => {
-    const oldTask = e.target.closest('li').id;  // pobieramy id w zależności w jaki element klikniemy, dzięki e.target
-    $editedTask = document.getElementById(oldTask);  // pobieramy cały element po id
-    $taskPopupInput.value = $editedTask.firstChild.textContent;  // pobieramy tekst w input dzięki odwołaniu się do pierwszego dziecka elementu
+    const oldTask = e.target.closest('li').id;
+    $editedTask = document.getElementById(oldTask);
+    $taskPopupInput.value = $editedTask.firstChild.textContent;
 
     $taskPopup.style.display = 'flex';
 };
 
 // Change the value of a task:
 const changeTask = () => {
-    if ($taskPopupInput.value !== '' && $taskPopupInput.value !== '       ') {   // dodać różne od spacji (ogólnie od kilku) !!!!
+    if ($taskPopupInput.value !== '' && $taskPopupInput.value !== '   ') {  // Fix mechanism for adding task as a regular space
         $editedTask.firstChild.textContent = $taskPopupInput.value;
         $taskPopup.style.display = 'none';
         $taskPopupInfo.innerText = '';
@@ -161,4 +156,4 @@ const deleteTask = (e) => {
 
 
 
-document.addEventListener('DOMContentLoaded', main);   // po wczytaniu strony, funkcja 'main' uruchomi zadeklarowane funkcje ! (OPTYMALIZACJA)
+document.addEventListener('DOMContentLoaded', main);
