@@ -1,5 +1,6 @@
 # Task Manager
-Test App. 
+Test App.
+Preview: https://mch-task-manager-app.netlify.app/
 
 ## Purpose
 The purpose of the project was to learn JS. 
